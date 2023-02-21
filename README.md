@@ -5,7 +5,7 @@ Front End Mentor - Calculadora de gorjetas
 # Deploy
 você pode acessar esse projeto aqui (link)
 
-# Linguages 
+# Linguagens 
 HTML
 
 CSS
