@@ -1,8 +1,8 @@
-# projeto4-csv-calculadora-de-gorjetas
+# Calculadora de gorjetas
 Front End Mentor - Calculadora de gorjetas
 
 
 # Deploy
-você pode acessar esse projeto aqui 
+você pode acessar esse projeto aqui (link)
 
 # Sobre
