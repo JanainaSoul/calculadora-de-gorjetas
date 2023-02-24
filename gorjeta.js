@@ -39,4 +39,22 @@ contaTotal.addEventListener('input', (entrada) => {
 	
 	})
 
-	
+	//calculo da Gorjeta
+	const btSelect = document.querySelectorAll('.gorjetaValor');
+	let valorGorjeta = '';
+
+	for (let select of btSelect){
+		select.addEventListener('click', () => {
+
+			for (let off of btSelect) {
+				off.classList.remove('active');
+			}
+
+			select.classList.add('active');
+
+			valorGorjeta = '';			
+			for(let escolhaGorjeta = 0; escolhaGorjeta < (select.innerText.length -1); escolhaGorjeta++) {
+				valorGorjeta += select.innerText[escolhaGorjeta];
+			}
+		})
+	}
