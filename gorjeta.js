@@ -58,3 +58,40 @@ contaTotal.addEventListener('input', (entrada) => {
 			}
 		})
 	}
+
+	//calculando a Gorjeta
+setInterval(() => {
+
+	if(valorConta !== '' && valorGorjeta !== '' && numeroPessoas.value !== '' && numeroPessoas.value !== '0') {
+
+		valorPessoa.innerText = `$${((parseFloat(valorConta) * (parseFloat(valorGorjeta) / 100)) / parseFloat(numeroPessoas.value)).toFixed(2)}`;
+
+		totalPessoa.innerText = `$${(((parseFloat(valorConta) * (parseFloat(valorGorjeta) / 100)) + parseFloat(valorConta)) / parseFloat(numeroPessoas.value)).toFixed(2)}`;
+
+	}else {
+		escolhaValorGorjeta.innerText = '0,00'
+		totalPessoa.innerText = '0,00'
+	}
+
+}, 1000)
+
+	//adicionando outro valor para Gorjeta - personalizar
+	valorPessoa.addEventListener('click', () => {
+
+		for (let select of btSelect) {
+			select.classList.remove('active');
+		}
+		valorGorjeta = '';
+
+	})
+
+
+	escolhaValorGorjeta.addEventListener('input', () => {
+
+		if (escolhaValorGorjeta.value === '0') {
+			escolhaValorGorjeta.classList.add ('erro');
+		} else {
+			escolhaValorGorjeta.classList.remove('erro');
+			valorGorjeta = escolhaValorGorjeta.value;
+		}
+	})
