@@ -95,3 +95,18 @@ setInterval(() => {
 			valorGorjeta = escolhaValorGorjeta.value;
 		}
 	})
+
+	//dividindo pelo numero de pessoas
+let qtdPessoas = '';
+
+numeroPessoas.addEventListener('input', () => {
+
+	if (numeroPessoas.value === '0') {
+		numeroPessoas.classList.add ('erro');
+	} else {
+		numeroPessoas.classList.remove('erro');
+		qtdPessoas = numeroPessoas.value;
+	}
+		
+})
+
