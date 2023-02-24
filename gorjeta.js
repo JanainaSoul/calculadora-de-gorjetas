@@ -110,3 +110,22 @@ numeroPessoas.addEventListener('input', () => {
 		
 })
 
+
+// limpar calculo
+
+	limpar.addEventListener('click', () => {
+
+		for (let select of btSelect) {
+		select.classList.remove('active');				
+	}
+		
+//resultado
+	contaTotal.value = '';
+	numeroPessoas.value = '';
+	valorGorjeta = '';
+	valorConta = '';
+	numeroPessoas.innerText = '0,00'
+	totalPessoa.innerText = '0,00'
+
+	})
+
