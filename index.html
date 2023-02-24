@@ -1,71 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- importando as Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- _______________________LOGO/IMAGEM_________________________________________________-->
+  
 </head>
 <body>
-  <div>
+  <div class="caixa">
     <!--h1 class="cabecalho"> SPLITTER</h1-->
-    <img class="cabecalho_imagem" src="images/logo.svg" alt="logo da calculadora SPLITTER">
+    <h1> <img class="cabecalho_imagem" src="images/logo.svg" alt="logo da calculadora SPLITTER"></h1>
   </div>
 
-<!-- _____________________________________________________________________-->
-<main>
+<!-- _______________________TOTAL CONTA_______________________________________________________-->
+
   <div class="conta">
-    
-        <label for="ContaTotal"> Conta</label>
-        <input type="text" class="contaTotal"  placeholder="0">
-  </div>
-<!-- _____________________________________________________________________-->
-  <div class="gorjeta">
-         <label for="EscolhaValorGorjeta"> Selecione a %</label>
-       <input type="submit" value="5%" class="gorjeta-valor">
-       <input type="submit" value="10%" class="gorjeta-valor">
-       <input type="submit" value="15%" class="gorjeta-valor">
-       <input type="submit" value="20%" class="gorjeta-valor">
-       <input type="submit" value="25%" class="gorjeta-valor">
-       <input type="submit" value="50%" class="gorjeta-valor">
-       <input type="number" name="personalizado" class="gorjetaValor">
-  </div>
-  <!-- _____________________________________________________________________-->
-  </div class="dividir-conta">
-        <label for="NumeroPessoas"> Número de Pessoas</label>
-       <input type="text" id="numero de pessoas" class="numeroPessoas" required>
-   <div>
-  <!-- _____________________________________________________________________-->
-   <div class="valor-pessoa">
-    <label for="ValorPorPessoa"> Valor da Gorjeta</label>
-    <input type="text" id="valor por pessoa" class="valorPessoa" required>
-   </div> 
-  <!-- _____________________________________________________________________-->
-    <div class="total-pessoa">
-    <label for="TotalPorPessoa"> Total</label>
-    <input type="text" id="total por  pessoa" class="totalPessoa" required>
-   </div> 
-   <!-- _____________________________________________________________________-->
-    <div class="reset">
-     <input type="submit" value="Limpar" class="enviar">
-    </div>
- </div>
-</main>
 
+      <div class="conta-total">
+
+          <label for="valorTotal"> Conta</label>
+          <input type="text" name="valorConta" id="contaTotal"  placeholder="0,00">
+          <br>
+
+<!--div class="selecione-gorjeta"-->
+          <label> Selecione a %</label><!-- _________SELECIONE A % GORJETA______________________-->
+
+          <span class="botoes">
+              <button class="gorjetaValor"> 5% </button>
+              <button class="gorjetaValor"> 10% </button >
+              <button class="gorjetaValor"> 15% </button >
+              <button class="gorjetaValor"> 25% </button >
+              <button class="gorjetaValor"> 50% </button >
+              <input type="text" name="personalizado" id="gorjetaValor"placeholder="CUSTOM">
+          </span>
+          <br>
+          <!--/div class="dividir-conta"-->
+          <label for="qtdPessoas"> Número de Pessoas</label> <!-- _______NUMERO DE PESSOAS__________________-->
+          <input type="number" name="qtdPessoas" id="numeroPessoas" min="1" required >
+           <!--div-->
+</div>
+  <!-- _______________RESULTADO______________________________________________________-->
+  <div class="resultado">
+
+      <span class="flexbox">
+           <p > Valor da Gorjeta<br><span class="totalPessoa"> /Pessoa</span></p>
+           <p class="mostrarValor" id="valorPessoa"> 0,00</p>
+      </span> 
+
+      <span class="flexbox">
+            <p > Total <br> <span class="totalPessoa"> /Pessoa</span></p>
+            <p class="mostrarValor"  id="total"> 0,00 </p>
+              <!--input type="text"  class="porPessoa"--> 
+      </span> 
+ <!-- ___________________RESET___________________________________________________-->
+       <button id="limpar">Limpar </button>
+  </div>
+  
+    
+ </div>
+
+
+<!-- __________________JAVASCRIPT_______________________________________ -->
 <script src="gorjeta.js"></script>
   
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Janaina</a>.
-  </div>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/JanainaSoul" target="_blank" rel="noopener noreferrer">Janaina</a>.
+    </footer>
 </body>
 </html>
